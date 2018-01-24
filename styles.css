@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+body {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'VT323', monospace;
+  font-size: 22px;
+  background: black;
+  color: orangered;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  background: orangered;
+
+  justify-content: flex-end;
+  font-size: 24px;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
+}
+
+.navigation a:hover {
+  background: black;
+  color: orangered;
+}
+
+.header {
+  display: flex;
+  color: orangered;
+  justify-content: center;
+  font-size: 72px;
+}
+
+.section {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.section__header {
+  display: flex;
+  justify-content: center;
+  background: orangered;
+  color: black;
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
